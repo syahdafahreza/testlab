@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/testlab/laraAuth/'),
+    'url' => env('APP_URL', 'http://localhost/laraAuth/'),
 
     'asset_url' => env('ASSET_URL', null),
 
