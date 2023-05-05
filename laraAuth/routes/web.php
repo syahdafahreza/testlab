@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 // Route::get('/home', [HomeController::class, 'index']);
 
-Route::resource('events', EventController::class, 'index');
+Route::resource('events', EventController::class);
 
 Auth::routes();
 
