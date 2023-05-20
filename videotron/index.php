@@ -30,11 +30,16 @@ body, html {
 
 
 #myVideo {
-  
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+}
+
+.video-container {
+  height: auto;
+  width: 100%;
 }
 
 .hdr{
@@ -56,7 +61,7 @@ body, html {
 
 
 .bgimg {
-  background-image: url('Dülmen,_Umland,_Sonnenaufgang_--_2012_--_8069.jpg');
+  background-image: url('Dülmen,_Umland,_Sonnenaufgang_--_2012_--_8069.webp');
   min-height: 100%;
   background-position: center;
   background-size: cover;
@@ -123,11 +128,14 @@ li a:hover:not(.active) {
   padding: 15px;
   border-radius: 3px;
   }
+
   .modal {
+  height: 100%;
+  width: 100%;
   align-items: center;
   display: flex;
   justify-content: center; 
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -136,7 +144,10 @@ li a:hover:not(.active) {
   transition: all 0.4s;
   visibility: hidden;
   opacity: 0;
+  z-index: 1;
+  padding: 10px;
   }
+
   .content {
   position: absolute;
   background: white;
@@ -162,7 +173,7 @@ li a:hover:not(.active) {
 
   .card-link{
     width:100%;
-    background-image: url('1.jpg');
+    background-image: url('1.webp');
     
     height: 100px;
   }
@@ -207,19 +218,20 @@ li a:hover:not(.active) {
 
   .im{
     /* height: 200px;
-    background-image:url('1.jpg'); */
+    background-image:url('1.webp'); */
     border-radius: 10%;
     position: relative;
-    background-color=color: blue;
+    background-color: blue;
+    z-index: 0;
   }
   .im h1{
     position: absolute;
+    margin: auto;
     color: white;
     font-size: 20px;
-    position: absolute;
     top: 50%;
     left: 50%;
-    
+    transform: translate(-50%, -50%);
     text-align: center;
   }
   
@@ -228,17 +240,16 @@ li a:hover:not(.active) {
 </head>
 <body>
 
-<video autoplay muted loop id="myVideo">
-  <source src="vid.mp4" type="video/mp4">
-</video>
-
-<header class="w3-display-container w3-wide w3-grayscale-min hdr" id="home">
+<div class="video-container">
   <div class="w3-display-topmiddle w3-text-white w3-center">
     <h1 class="w3-jumbo">WELCOME</h1>
     <h2>Coming Soon</h2>
     <h2><b>5 days until deployment</b></h2>
   </div>
-</header>
+  <video autoplay muted loop id="myVideo"><source src="video/vid.mp4" type="video/mp4"></video>
+</div>
+
+<!-- <header class="w3-display-container w3-wide w3-grayscale-min hdr" id="home"></header> -->
 
 <div class="navbar center">
   <ul>
@@ -274,7 +285,7 @@ li a:hover:not(.active) {
         <a href="#popup-box">
       
         <div class="im">
-          <img src="3.jpg" alt="Landscape 3" style="width:100%">
+          <img src="3.webp" alt="Landscape 3" style="width:100%">
           <h1>About</h1>
         </div>
         
@@ -283,18 +294,18 @@ li a:hover:not(.active) {
       </div>
    
     <div class="w3-quarter">
-      <img src="2.jpg" alt="Landscape 2" style="width:100%">
-      <h4>Александр Байдуков/Wikimedia Commons/”Lake_Seliger ._Ostashkov. _View_of_Voroniy_Island .jpg”/ CC BY-SA 4.0</h4>
+      <img src="2.webp" alt="Landscape 2" style="width:100%">
+      <h4>Александр Байдуков/Wikimedia Commons/”Lake_Seliger ._Ostashkov. _View_of_Voroniy_Island .webp”/ CC BY-SA 4.0</h4>
       <p>English: Seliger: Ostashkovsky district, Tver region</p>
     </div>
     <div class="w3-quarter">
-      <img src="3.jpg" alt="Landscape 3" style="width:100%">
+      <img src="3.webp" alt="Landscape 3" style="width:100%">
       <h4>Dietmar Rabich / Wikimedia Commons / “Nordkirchen, Naturschutzgebiet Ichterloh -- 2018 -- 2131-7” / CC BY-SA 4.0
 </h4>
       <p>English: Trees and other plants on the edge of the Nature reserve Ichterloh, Nordkirchen at sunrise, North Rhine-Westphalia, Germany</p>
     </div>
     <div class="w3-quarter">
-      <img src="4.jpg" alt="Landscape 4" style="width:100%">
+      <img src="4.webp" alt="Landscape 4" style="width:100%">
       <h4>Dietmar Rabich / Wikimedia Commons / “Dülmen, Börnste, Waldweg -- 2015 -- 4649” / CC BY-SA 4.0
 </h4>
       <p>English: Autumn in the Börnste hamlet, Kirchspiel, Dülmen, North Rhine-Westphalia, Germany</p>
